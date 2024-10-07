@@ -1,0 +1,145 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3748;
+  margin: 40px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Input and Button Styles */
+input[type="text"] {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  width: 65%;
+  margin-right: 10px;
+  font-size: 1rem;
+  background-color: #e2e8f0;
+  color: #2d3748;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3182ce;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the Todo List */
+.todo-list-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.add-todo-container {
+  margin-bottom: 20px;
+}
+
+/* Flex container for Todo items */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #edf2f7;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item:last-child {
+  margin-bottom: 0;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  text-align: left;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+/* Edit Mode Styles */
+.edit-mode {
+  display: flex;
+  align-items: center;
+}
+
+.edit-mode input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+/* Button Styles for Edit/Delete */
+button.edit-btn {
+  background-color: #48bb78;
+}
+
+button.delete-btn {
+  background-color: #e53e3e;
+}
+
+button.edit-btn:hover {
+  background-color: #38a169;
+}
+
+button.delete-btn:hover {
+  background-color: #c53030;
+}
+
+button.edit-btn, button.delete-btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Add subtle animations */
+.todo-item, input[type="text"], button {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
